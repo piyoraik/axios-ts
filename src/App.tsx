@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { apiGet } from './api/index';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
           Learn React
         </a>
       </header>
+
+      {
+        apiGet('https://www.googleapis.com/books/v1/volumes?q=TypeScript')
+      }
     </div>
   );
 }
