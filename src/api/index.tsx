@@ -1,15 +1,7 @@
 import axios from "axios"
+import { Qiita } from "../types/types"
 
-export const apiGet = (URL:string):any => {
-  axios
-    .get(URL)
-    .then((result) => {
-      console.log(result.data.items)
-      return result.data.items
-    })
-    .catch((error) => {
-      console.log('失敗')
-      console.log(error)
-      return
-    })
+export async function main() {
+  const res = await axios.get<Qiita[]>("https://qiita.com/api/v2/items");
+  return res;
 }

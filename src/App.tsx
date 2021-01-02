@@ -15,11 +15,13 @@ function App() {
   const classes = useStyles()
 
   return (
-    <div className={classes.root} >
-      <CssBaseline />
-      <Header />
-      <MenuContent />
-      <MainContent />
+    <div className="App" >
+      <div className={classes.root}>
+        <CssBaseline />
+        <Header />
+        <MenuContent />
+        <MainContent />
+      </div>
     </div>
   );
 }
